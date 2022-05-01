@@ -1,7 +1,4 @@
-import {
-    Database,
-    PostgresConnector,
-} from "./deps.ts";
+import { Database, PostgresConnector } from "./deps.ts";
 import { Users } from "./models/users.ts";
 
 const models = [Users];

@@ -17,7 +17,7 @@ export class Users extends Model {
         },
         email: {
             type: DataTypes.STRING,
-            unique: true,
+            // unique: true,
         },
     };
 }
