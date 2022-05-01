@@ -1,7 +1,7 @@
 import {
     Database,
     PostgresConnector,
-} from "https://deno.land/x/denodb@v1.0.40/mod.ts";
+} from "./deps.ts";
 import { Users } from "./models/users.ts";
 
 const models = [Users];
