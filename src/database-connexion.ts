@@ -7,7 +7,7 @@ import { Users } from "./models/users.ts";
 const models = [Users];
 
 // Database connexion & initialization
-export function getDatabase(): Database {
+export function initDatabase(): Database {
     // get database info from environment
 
     const host = Deno.env.get("DB_HOST") ?? "localhost";
