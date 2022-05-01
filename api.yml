@@ -1,0 +1,62 @@
+openapi: "3.0.2"
+info:
+  title: Polycode
+  version: "1.0"
+servers:
+  - url: http://localhost:3000
+    description: Local server
+  - url: https://polycode-api.juno.nponsard.net
+    description: Production server
+paths:
+  /users:
+    post:
+      tags:
+        - "User managment"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  description: Username
+                password:
+                  type: string
+                  description: Password
+                email:
+                  type: string
+                  description: Email
+      responses:
+        "201":
+          description: User created
+  /users/login:
+    post:
+      tags:
+        - "User managment"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  description: Username
+                password:
+                  type: string
+                  description: Password
+      responses:
+        "200":
+          description: User logged in
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    description: JWT token
+                  refreshToken:
+                    type: string
+                    description: Refresh token
